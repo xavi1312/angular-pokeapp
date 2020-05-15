@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IPokemon } from 'src/app/interfaces/ipokemon';
 
 @Component({
-  selector: 'app-pokemon-card-list',
+  selector: 'pokemon-card-list',
   templateUrl: './pokemon-card-list.component.html',
   styleUrls: ['./pokemon-card-list.component.scss'],
 })
