@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IPokemon } from 'src/app/interfaces/ipokemon';
 
 @Component({
   selector: 'app-pokemon-card-list',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class PokemonCardListComponent implements OnInit {
   constructor() {}
 
-  pokeList: any = [
+  pokeList: Array<IPokemon> = [
     {
       types: ['poison', 'grass'],
       _id: '5ebdb98a138550456c2ea375',
