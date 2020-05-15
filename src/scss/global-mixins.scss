@@ -1,0 +1,41 @@
+@import "global-variables";
+
+// Media querys
+@mixin media-breakpoint-up($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+@mixin media-breakpoint-down($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+@mixin media-breakpoint-between($breakpoint, $breakpoint2) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint2) {
+      $first-breakpoint: map-get($breakpoints, $breakpoint);
+      $second-breakpoint: map-get($breakpoints, $breakpoint2);
+
+      @media (min-width: $first-breakpoint) and (max-width: $second-breakpoint) {
+        @content;
+      }
+    } @else {
+      @warn 'Invalid breakpoint: #{$breakpoint2}.';
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
