@@ -1,1 +1,10 @@
-<p>pokemon-card works!</p>
+<article class="card">
+  <figure>
+    <img [src]="pokemon.img" [alt]="pokemon.name" class="card-image" />
+  </figure>
+  <div class="card-info">
+    <small class="card-pokedex-number">N.º{{ pokemon.pokedexNumber }} </small>
+    <h3 class="card-name">{{ pokemon.name }}</h3>
+    <types-list [types]="pokemon.types"></types-list>
+  </div>
+</article>

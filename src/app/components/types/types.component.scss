@@ -1,0 +1,18 @@
+@import "~src/scss/global-variables";
+li {
+  margin-right: 1em;
+  padding: 0.3em 1.3em;
+
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 400;
+
+  border-radius: 5px;
+  color: #fff;
+}
+
+@each $type, $color in $types-color {
+  .#{$type} {
+    background-color: $color;
+  }
+}

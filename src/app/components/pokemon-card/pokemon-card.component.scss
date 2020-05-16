@@ -1,0 +1,23 @@
+@import "~src/scss/global-variables";
+figure {
+  max-width: $card-size;
+  max-height: $card-size;
+  margin: 0 auto;
+  margin-bottom: 6px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+.card-info {
+  max-width: $card-size;
+  margin: 0 auto;
+  padding-left: 0.5em;
+}
+.card-pokedex-number {
+  font-weight: 300;
+}
+.card-name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.3em;
+  margin: 0.4em 0;
+}
