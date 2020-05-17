@@ -27,7 +27,7 @@ export class PokemonCardListComponent implements OnInit {
   }
   morePokemons() {
     this.isPokeListUpdated = false;
-    if (this.index + this.increment >= this.limit) return;
+    if (this.index > this.limit) return;
 
     this.pokemonService
       .getPokemonsBetween(this.index, this.index + this.increment)

@@ -1,9 +1,16 @@
 <article class="card">
   <figure>
-    <img [src]="pokemon.img" [alt]="pokemon.name" class="card-image" />
+    <img
+      height="215"
+      [src]="pokemon.img"
+      [alt]="pokemon.name"
+      class="card-image"
+    />
   </figure>
   <div class="card-info">
-    <small class="card-pokedex-number">N.º{{ pokemon.pokedexNumber }} </small>
+    <small class="card-pokedex-number"
+      >{{ pokemon.pokedexNumber | pokedexNumber }}
+    </small>
     <h3 class="card-name">{{ pokemon.name }}</h3>
     <types-list [types]="pokemon.types"></types-list>
   </div>

@@ -7,6 +7,7 @@ import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.com
 import { TypesListComponent } from './components/types-list/types-list.component';
 import { TypesComponent } from './components/types/types.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PokedexNumberPipe } from './pipes/pokedex-number.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
     PokemonCardComponent,
     TypesListComponent,
     TypesComponent,
+    PokedexNumberPipe,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
