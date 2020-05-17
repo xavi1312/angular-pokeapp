@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class LoggerService {
   constructor() {}
   log(msg: any) {
-    console.log(msg);
+    console.log('%c' + msg, 'color: green');
   }
   warn(msg: any) {
     console.warn(msg);
