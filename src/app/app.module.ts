@@ -8,6 +8,7 @@ import { TypesListComponent } from './components/types-list/types-list.component
 import { TypesComponent } from './components/types/types.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokedexNumberPipe } from './pipes/pokedex-number.pipe';
+import { BackToTopButtonComponent } from './components/back-to-top-button/back-to-top-button.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { PokedexNumberPipe } from './pipes/pokedex-number.pipe';
     TypesListComponent,
     TypesComponent,
     PokedexNumberPipe,
+    BackToTopButtonComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
